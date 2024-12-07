@@ -1,0 +1,121 @@
+/* Fonts and Basic Reset */
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+input,
+button {
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+/* Root and Background */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #f4f4f9, #e0e7ff); /* Light background */
+  gap: 20px;
+}
+
+/* Header and Input */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  gap: 10px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 12px;
+  outline: none;
+  padding: 12px 18px;
+  font-size: 1em;
+  border: 2px solid #94a3b8; /* Light gray border */
+  background: #ffffff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+header input:focus {
+  border-color: #6366f1; /* Purple border on focus */
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.3); /* Subtle glow */
+}
+
+header button {
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #6366f1; /* Purple background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+header button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Todo Items */
+.main {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #ffffff; /* Clear white card */
+  color: #374151; /* Dark gray text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todoItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Action Buttons (Edit/Delete) */
+.actionsContainer button {
+  border: none;
+  padding: 3px 3px;
+  background: transparent;
+  color: #6366f1; /* Purple icons */
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.actionsContainer button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 640px) {
+  header input {
+    font-size: 1.2em;
+  }
+
+  header button {
+    font-size: 1.1em;
+  }
+}
